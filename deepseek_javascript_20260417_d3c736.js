@@ -5,16 +5,10 @@ const express = require('express');
 // AJOUTE TES SERVEURS ICI 👇
 const SERVEURS = [
     {
-        nom: "Serveur Principal",
-        ip: "TON_IP:PORT",  // ex: '51.75.122.200:7777'
-        webhook: "TON_WEBHOOK_URL"
-    },
-    {
-        nom: "Serveur Secondaire", 
-        ip: "TON_IP:PORT",
-        webhook: "TON_WEBHOOK_URL"
+        nom: "NCL",
+        ip: "83.150.217.47:7257",  // ex: '51.75.122.200:7777'
+        webhook: "https://discord.com/api/webhooks/1494836164685987900/nOjANvIA3NK-YFuYCeLS_77JpbDk2Q81PDVpmfmPYCBSGxdVVRbj3kCowEYqAy9C7mWy"
     }
-    // Ajoute autant de serveurs que tu veux
 ];
 
 const CHECK_INTERVAL = 60000; // 1 minute
