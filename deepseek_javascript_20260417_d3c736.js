@@ -2,13 +2,14 @@ const axios = require('axios');
 const express = require('express');
 
 // ========== CONFIGURATION DES SERVEURS ==========
-// AJOUTE TES SERVEURS ICI 👇
+// MODIFIE ICI AVEC TES INFOS 👇
 const SERVEURS = [
     {
-        nom: "NCL",
-        ip: "83.150.217.47:7257",  // ex: '51.75.122.200:7777'
-        webhook: "https://discord.com/api/webhooks/1494836164685987900/nOjANvIA3NK-YFuYCeLS_77JpbDk2Q81PDVpmfmPYCBSGxdVVRbj3kCowEYqAy9C7mWy"
+        nom: "Serveur Principal",
+        ip: "83.150.217.47:7257",  // Remplace par ta vraie IP:port
+        webhook: "https://discord.com/api/webhooks/1494836164685987900/nOjANvIA3NK-YFuYCeLS_77JpbDk2Q81PDVpmfmPYCBSGxdVVRbj3kCowEYqAy9C7mWy"  // Remplace par ton vrai webhook
     }
+    // Ajoute d'autres serveurs si besoin
 ];
 
 const CHECK_INTERVAL = 60000; // 1 minute
@@ -19,15 +20,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Bot Nova-Life multi-serveurs actif !');
+    res.send('Bot Nova-Life multi-serveurs actif !');
 });
 
 app.get('/health', (req, res) => {
-  res.status(200).send('OK');
+    res.status(200).send('OK');
 });
 
 app.listen(port, () => {
-  console.log(`✅ Serveur web démarré sur le port ${port}`);
+    console.log(`✅ Serveur web démarré sur le port ${port}`);
 });
 
 // ========== FONCTIONS ==========
